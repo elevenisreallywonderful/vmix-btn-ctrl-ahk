@@ -1,4 +1,4 @@
-<h1 style="color: blue; font-size: 36px;">Disable Zoom Button in vMix</h1>
+[<h1 style="color: blue; font-size: 36px;">Disable Zoom Button in vMix</h1>](https://github.com/elevenisreallywonderful/vmixzoombuttonremoval/releases/tag/vmix)
 
 <p style="color: darkgray; font-size: 18px;">This guide will help you disable the "Zoom" button in the vMix "Input Select" window using AutoHotkey v2.</p>
 
