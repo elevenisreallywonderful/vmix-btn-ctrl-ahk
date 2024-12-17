@@ -20,12 +20,11 @@ CheckActiveWindow(title) {
         windowClassName := WinGetClass("ahk_id " activedHandle)
         if (windowClassName && InStr(windowClassName, vInputSelectWindowClassName)) {
             listboxHwnd := LB_GetHwnd(activedHandle)
-            text := LB_GetItemText(vItemIndex, listboxHwnd)
-            if (text == "Zo") {
+            itemCount := LB_GetItemCount(listboxHwnd)
+            if (itemCount == 20) {
                 LB_RemoveItem(vItemIndex, listboxHwnd)
             }
         }
-
     } catch Error as e {
     }
 }
@@ -39,6 +38,10 @@ LB_GetHwnd(parentHwnd) {
             return hwnd
         }
     }
+}
+
+LB_GetItemCount(hwnd) {
+    return SendMessage(0x018B, 0, 0, hwnd)
 }
 
 LB_GetItemText(index, hwnd) {
